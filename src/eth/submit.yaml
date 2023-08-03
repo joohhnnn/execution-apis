@@ -20,3 +20,19 @@
     name: Transaction hash
     schema:
       $ref: '#/components/schemas/hash32'
+- name: eth_sendRawTransactionConditional
+  summary: Submits a raw transaction with options.
+  params:
+    - name: Transaction
+      required: true
+      schema:
+        $ref: '#/components/schemas/bytes'
+    - name: Options
+      required: false
+      schema:
+        $ref: '#/components/schemas/bytes'
+  result:
+    name: Transaction hash
+    schema:
+      $ref: '#/components/schemas/hash32'
+

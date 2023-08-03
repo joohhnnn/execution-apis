@@ -1,0 +1,38 @@
+TxOptions:
+  title: Transaction Options
+  type: object
+  properties:
+    knownAccounts:
+      title: Known Accounts
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/KnownAccount'
+    blockNumberMin:
+      title: Minimum Block Number
+      $ref: '#/components/schemas/bigInt'
+    blockNumberMax:
+      title: Maximum Block Number
+      $ref: '#/components/schemas/bigInt'
+    timestampMin:
+      title: Minimum Timestamp
+      type: integer
+      format: uint64
+    timestampMax:
+      title: Maximum Timestamp
+      type: integer
+      format: uint64
+  required:
+    - knownAccounts
+
+KnownAccount:
+  title: Known Account
+  type: object
+  properties:
+    StorageRoot:
+      title: Storage Root
+      $ref: '#/components/schemas/hash32'
+    StorageSlots:
+      title: Storage Slots
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/hash32'
