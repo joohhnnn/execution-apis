@@ -30,7 +30,7 @@
     - name: Options
       required: false
       schema:
-        $ref: '#/components/schemas/bytes'
+        $ref: '#/components/schemas/TxOptions'
   result:
     name: Transaction hash
     schema:
